@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="韓語職場敬語與社交禮儀互動式知識庫，整理敬語文法、職場情境範本與 AI Reflection Agent 工作流程。">
+  <title>韓語職場禮儀知識庫｜Korean Workplace Etiquette Wiki</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#263746', muted: '#718096', cream: '#F7F6F2',
+            paper: '#FFFFFF', bluegray: '#DCE6EB', accent: '#6E8798',
+            pale: '#EEF3F5', warm: '#E9E3D8'
+          },
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans TC', 'Noto Sans KR', 'system-ui', 'sans-serif']
+          },
+          boxShadow: { soft: '0 8px 30px rgba(38,55,70,.06)' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background:#F7F6F2; color:#263746; }
+    .nav-link.active { color:#405F73; background:#EAF0F2; }
+    .nav-link { transition:all .2s ease; }
+    .table-wrap { overflow-x:auto; }
+    .table-wrap table { min-width:650px; width:100%; border-collapse:collapse; }
+    th,td { padding:13px 15px; text-align:left; vertical-align:top; border-bottom:1px solid #E8ECEE; }
+    th { color:#607787; font-size:.82rem; font-weight:700; background:#F4F7F8; }
+    tr:last-child td { border-bottom:0; }
+    .copy-btn { transition:all .2s ease; }
+    .copy-btn:focus-visible, button:focus-visible, a:focus-visible { outline:3px solid #9CB5C3; outline-offset:3px; }
+    .step-line { background:linear-gradient(90deg,#9CB2BF,#D8E1E5); }
+    @media (max-width: 767px) { .sidebar { position:static !important; } }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="sticky top-0 z-40 border-b border-slate-200/80 bg-cream/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
+      <a href="#home" class="flex items-center gap-3" aria-label="回到首頁">
+        <span class="grid h-9 w-9 place-items-center rounded-xl bg-ink text-sm font-bold text-white">한</span>
+        <span class="leading-tight"><span class="block text-sm font-bold tracking-wide">K-WORK WIKI</span><span class="text-xs text-muted">韓語職場禮儀知識庫</span></span>
+      </a>
+      <button id="menuBtn" class="rounded-lg border border-slate-300 px-3 py-2 text-sm md:hidden" aria-expanded="false" aria-controls="mobileNav">選單</button>
+      <nav class="hidden items-center gap-1 text-sm md:flex">
+        <a class="nav-link rounded-lg px-3 py-2" href="#grammar">敬語文法</a>
+        <a class="nav-link rounded-lg px-3 py-2" href="#scenarios">情境範本</a>
+        <a class="nav-link rounded-lg px-3 py-2" href="#agent">AI 工作流程</a>
+        <a class="nav-link rounded-lg px-3 py-2" href="#manners">職場禮儀</a>
+      </nav>
+    </div>
+    <nav id="mobileNav" class="hidden border-t border-slate-200 px-5 py-3 md:hidden">
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a class="rounded-lg bg-pale px-3 py-2" href="#grammar">敬語文法</a>
+        <a class="rounded-lg bg-pale px-3 py-2" href="#scenarios">情境範本</a>
+        <a class="rounded-lg bg-pale px-3 py-2" href="#agent">AI 工作流程</a>
+        <a class="rounded-lg bg-pale px-3 py-2" href="#manners">職場禮儀</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="relative overflow-hidden">
+      <div class="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-bluegray/60 blur-3xl"></div>
+      <div class="absolute -bottom-28 left-1/4 h-72 w-72 rounded-full bg-warm/50 blur-3xl"></div>
+      <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 md:grid-cols-[1.2fr_.8fr] md:py-24">
+        <div>
+          <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-1.5 text-xs font-semibold tracking-wide text-accent">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span> PRACTICAL KOREAN · WORKPLACE GUIDE
+          </div>
+          <h1 class="max-w-2xl text-4xl font-bold leading-tight tracking-tight md:text-6xl">把韓語說得得體，<br><span class="text-accent">讓職場溝通更自在。</span></h1>
+          <p class="mt-6 max-w-xl text-base leading-8 text-slate-600 md:text-lg">從敬語句型、Email 寫法到日常職場禮節，整理韓國職場常見的溝通方式。除了知道「怎麼說」，也理解「什麼時候說」以及背後的語氣差異。</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#grammar" class="rounded-xl bg-ink px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-slate-700">開始閱讀 <span aria-hidden="true">→</span></a>
+            <a href="#scenarios" class="rounded-xl border border-slate-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white">查看情境範本</a>
+          </div>
+          <div class="mt-10 flex flex-wrap gap-6 text-sm text-muted">
+            <span>01　敬語文法</span><span>02　實用對話</span><span>03　AI 反思流程</span>
+          </div>
+        </div>
+        <div class="mx-auto w-full max-w-md">
+          <div class="rounded-3xl border border-white bg-white/80 p-6 shadow-soft backdrop-blur">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold tracking-[.18em] text-accent">TODAY'S EXPRESSION</span>
+              <span class="rounded-full bg-pale px-3 py-1 text-xs text-accent">敬語小教室</span>
+            </div>
+            <p class="mt-8 text-3xl font-semibold leading-relaxed text-ink" lang="ko">확인해 주셔서<br>감사합니다.</p>
+            <p class="mt-3 text-sm text-muted">謝謝您幫忙確認。</p>
+            <div class="my-6 h-px bg-slate-100"></div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-pale p-4"><p class="text-xs text-muted">語氣</p><p class="mt-1 font-semibold">正式、禮貌</p></div>
+              <div class="rounded-2xl bg-[#F5F1EA] p-4"><p class="text-xs text-muted">適用場合</p><p class="mt-1 font-semibold">Email／工作訊息</p></div>
+            </div>
+            <p class="mt-5 text-xs leading-6 text-muted">小提醒：敬語不只是句尾加上 요，也要留意動詞、稱謂與整體語境。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mx-auto grid max-w-7xl gap-8 px-5 pb-20 md:grid-cols-[210px_1fr]">
+      <aside class="sidebar h-fit md:sticky md:top-24">
+        <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-soft">
+          <p class="mb-3 px-2 text-xs font-bold tracking-widest text-muted">CONTENT</p>
+          <a href="#grammar" class="nav-link active mb-1 block rounded-lg px-3 py-2.5 text-sm">01　核心敬語文法</a>
+          <a href="#scenarios" class="nav-link mb-1 block rounded-lg px-3 py-2.5 text-sm">02　情境對話範本</a>
+          <a href="#agent" class="nav-link mb-1 block rounded-lg px-3 py-2.5 text-sm">03　AI Reflection Agent</a>
+          <a href="#manners" class="nav-link block rounded-lg px-3 py-2.5 text-sm">04　社交與職場禮儀</a>
+          <div class="mt-5 rounded-xl bg-cream p-3">
+            <p class="text-xs font-semibold text-ink">閱讀小建議</p>
+            <p class="mt-1 text-xs leading-5 text-muted">先理解句型，再搭配情境範本練習。不同公司與對象的習慣可能略有差異。</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="min-w-0 space-y-16">
+        <section id="grammar" class="scroll-mt-28">
+          <div class="mb-6">
+            <p class="text-xs font-bold tracking-[.2em] text-accent">SECTION 01 · GRAMMAR</p>
+            <h2 class="mt-2 text-2xl font-bold md:text-3xl">核心敬語文法解析</h2>
+            <p class="mt-3 leading-7 text-slate-600">韓語職場溝通常見的敬語，主要會出現在句尾、主體尊敬表現，以及對他人行為的謙讓表達。以下整理常用句型與使用時機。</p>
+          </div>
+          <div class="mb-5 grid gap-4 sm:grid-cols-3">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft"><p class="text-xs font-semibold text-accent">句尾敬語</p><p class="mt-2 text-xl font-bold" lang="ko">-습니다 / -ㅂ니다</p><p class="mt-2 text-sm leading-6 text-muted">正式、較有距離感，常用於簡報、正式報告或初次聯繫。</p></article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft"><p class="text-xs font-semibold text-accent">日常禮貌體</p><p class="mt-2 text-xl font-bold" lang="ko">-아요 / -어요</p><p class="mt-2 text-sm leading-6 text-muted">職場日常對話常見，語氣自然且有禮貌。</p></article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft"><p class="text-xs font-semibold text-accent">主體尊敬</p><p class="mt-2 text-xl font-bold" lang="ko">-(으)시-</p><p class="mt-2 text-sm leading-6 text-muted">尊敬句子的主體，例如主管、客戶或長輩。</p></article>
+          </div>
+          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft">
+            <div class="flex items-center justify-between border-b border-slate-100 px-5 py-4"><h3 class="font-bold">常見敬語文法對比表</h3><span class="text-xs text-muted">可左右滑動</span></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>文法／片語</th><th>中文說明</th><th>適用時機</th><th>語氣／敬語階級</th></tr></thead>
+                <tbody>
+                  <tr><td class="font-semibold" lang="ko">-습니다 / -ㅂ니다</td><td>正式陳述句尾，語氣端正。</td><td>正式簡報、會議報告、公告。</td><td>正式敬語體（하십시오체）</td></tr>
+                  <tr><td class="font-semibold" lang="ko">-아요 / -어요</td><td>日常禮貌句尾，較自然親切。</td><td>同事日常交談、一般工作詢問。</td><td>非正式禮貌體（해요체）</td></tr>
+                  <tr><td class="font-semibold" lang="ko">-(으)시-</td><td>尊敬句子的主體，接在動詞或形容詞詞幹後。</td><td>描述主管、客戶或長輩的動作與狀態。</td><td>主體尊敬法</td></tr>
+                  <tr><td class="font-semibold" lang="ko">께서</td><td>主格助詞「이/가」的尊敬形式。</td><td>尊敬對象作為句子主語時。</td><td>主體尊敬</td></tr>
+                  <tr><td class="font-semibold" lang="ko">드리다</td><td>「주다」的謙讓語，表示自己為對方做某事。</td><td>向主管或客戶提供資料、協助。</td><td>謙讓表現</td></tr>
+                  <tr><td class="font-semibold" lang="ko">말씀하시다</td><td>「말하다」的尊敬表現，表示對方說話。</td><td>轉述主管、客戶或長輩的發言。</td><td>詞彙型尊敬</td></tr>
+                  <tr><td class="font-semibold" lang="ko">죄송합니다</td><td>正式道歉，比 미안해요 更正式。</td><td>工作延誤、造成不便或需要致歉時。</td><td>正式禮貌表現</td></tr>
+                  <tr><td class="font-semibold" lang="ko">확인 부탁드립니다</td><td>敬請確認；以 부탁드리다 表達謙讓請託。</td><td>Email、工作訊息請對方確認資料。</td><td>正式商務表現</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <article class="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-soft md:p-6">
+            <div class="flex flex-wrap items-center justify-between gap-2"><div><p class="text-xs font-bold tracking-widest text-accent">GRAMMAR IN CONTEXT</p><h3 class="mt-1 text-lg font-bold">句型拆解｜請對方確認資料</h3></div><span class="rounded-full bg-pale px-3 py-1 text-xs font-semibold text-accent">正式敬語體</span></div>
+            <p class="mt-3 text-sm text-muted">情境：寄送文件給主管或合作窗口，希望對方協助確認內容。</p>
+            <p class="my-4 rounded-xl bg-cream p-4 text-lg font-semibold leading-8" lang="ko">첨부 파일을 확인해 주시면 감사하겠습니다.</p>
+            <p class="text-sm text-slate-600">如果您能幫忙確認附件，我將非常感謝。</p>
+            <div class="table-wrap mt-4">
+              <table class="!min-w-[560px]">
+                <thead><tr><th>文法點</th><th>中文解釋</th><th>適用對象</th></tr></thead>
+                <tbody>
+                  <tr><td lang="ko">첨부 파일</td><td>附件、附加檔案。</td><td>同事、主管、客戶皆可。</td></tr>
+                  <tr><td lang="ko">확인해 주시다</td><td>請對方幫忙確認；주다 搭配 -(으)시- 表達對對方動作的尊敬。</td><td>需要對方協助執行動作時。</td></tr>
+                  <tr><td lang="ko">-(으)면 감사하겠습니다</td><td>「如果……我會很感謝」，比直接命令更委婉。</td><td>正式 Email 或較客氣的請託。</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="mt-4 rounded-xl border-l-4 border-accent bg-pale/70 p-4 text-sm leading-6"><strong>使用提醒：</strong>「확인해 주시면 감사하겠습니다」已經是自然且有禮貌的請託。避免再疊加不必要的尊敬形式，像是不自然地使用雙重敬語。</div>
+          </article>
+        </section>
+
+        <section id="scenarios" class="scroll-mt-28">
+          <div class="mb-6">
+            <p class="text-xs font-bold tracking-[.2em] text-accent">SECTION 02 · SCENARIOS</p>
+            <h2 class="mt-2 text-2xl font-bold md:text-3xl">情境對話範本｜Email vs 口語</h2>
+            <p class="mt-3 leading-7 text-slate-600">同一個溝通目的，會因為媒介和對象不同而改變語氣。點選下方分類查看範本，並可直接複製韓語內容。</p>
+          </div>
+          <div class="mb-4 flex flex-wrap gap-2" role="tablist" aria-label="情境範本分類">
+            <button class="scenario-tab rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white" data-tab="email" role="tab" aria-selected="true">正式 Email</button>
+            <button class="scenario-tab rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold" data-tab="spoken" role="tab" aria-selected="false">口語對話</button>
+            <button class="scenario-tab rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold" data-tab="apology" role="tab" aria-selected="false">道歉與回覆</button>
+          </div>
+          <div id="scenarioContent" class="space-y-4" aria-live="polite">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft md:p-6">
+              <div class="flex flex-wrap items-center justify-between gap-3"><div><span class="text-xs font-semibold text-accent">情境 A · 寄送資料</span><h3 class="mt-1 text-lg font-bold">寄送會議資料給主管</h3></div><button class="copy-btn rounded-lg border border-slate-300 px-3 py-2 text-xs font-semibold hover:bg-cream" data-copy="안녕하세요, 팀장님.&#10;&#10;요청하신 회의 자료를 첨부하여 보내드립니다.&#10;확인 부탁드립니다.&#10;&#10;감사합니다.&#10;홍길동 드림.">複製韓語範本</button></div>
+              <div class="mt-4 rounded-xl bg-cream p-4 text-sm leading-7" lang="ko">안녕하세요, 팀장님.<br><br>요청하신 회의 자료를 첨부하여 보내드립니다.<br>확인 부탁드립니다.<br><br>감사합니다.<br>홍길동 드림.</div>
+              <p class="mt-3 text-sm leading-6 text-slate-600"><strong>中文理解：</strong>您好，組長。隨信附上您要求的會議資料，敬請確認。謝謝您。洪吉童敬上。</p>
+              <p class="mt-2 text-xs text-muted">用法：드림 是常見的書信結尾敬語；팀장님 是對組長的稱呼。</p>
+            </article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft md:p-6">
+              <div class="flex flex-wrap items-center justify-between gap-3"><div><span class="text-xs font-semibold text-accent">情境 B · 請求確認</span><h3 class="mt-1 text-lg font-bold">詢問對方是否方便確認</h3></div><button class="copy-btn rounded-lg border border-slate-300 px-3 py-2 text-xs font-semibold hover:bg-cream" data-copy="검토해 보시고 의견 주시면 감사하겠습니다.">複製韓語範本</button></div>
+              <div class="mt-4 rounded-xl bg-cream p-4 text-sm leading-7" lang="ko">검토해 보시고 의견 주시면 감사하겠습니다.</div>
+              <p class="mt-3 text-sm leading-6 text-slate-600"><strong>中文理解：</strong>若您看過後能提供意見，我將非常感謝。</p>
+              <p class="mt-2 text-xs text-muted">用法：適合正式 Email；不是命令對方，而是委婉提出請求。</p>
+            </article>
+          </div>
+          <div class="mt-5 grid gap-4 md:grid-cols-2">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5"><p class="text-xs font-bold text-accent">EMAIL · 書面</p><p class="mt-2 font-semibold">資訊完整、語氣較正式</p><p class="mt-2 text-sm leading-6 text-muted">通常包含問候、說明目的、具體請求與結尾。第一次聯繫或對外窗口，建議使用較完整的格式。</p></article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-5"><p class="text-xs font-bold text-accent">SPOKEN · 口語</p><p class="mt-2 font-semibold">簡潔自然、仍保有禮貌</p><p class="mt-2 text-sm leading-6 text-muted">面對面或即時訊息可更精簡，但對主管、客戶仍建議使用 해요체 或正式敬語體。</p></article>
+          </div>
+        </section>
+
+        <section id="agent" class="scroll-mt-28">
+          <div class="mb-6">
+            <p class="text-xs font-bold tracking-[.2em] text-accent">SECTION 03 · AI REFLECTION AGENT</p>
+            <h2 class="mt-2 text-2xl font-bold md:text-3xl">AI Reflection Agent 運作機制</h2>
+            <p class="mt-3 leading-7 text-slate-600">Reflection Agent 不只一次產生答案，而是把「撰寫、檢查、修正」拆成不同階段。透過反覆檢視，降低敬語使用錯誤、語氣不自然或文化情境不合適的機率。</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft md:p-7">
+            <div class="grid gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-center">
+              <div class="rounded-2xl bg-[#EEF3F5] p-5">
+                <div class="flex items-center justify-between"><span class="text-xs font-bold tracking-widest text-accent">01 · WRITER</span><span class="grid h-8 w-8 place-items-center rounded-full bg-white text-accent">✎</span></div>
+                <h3 class="mt-3 text-xl font-bold">Writer</h3><p class="mt-2 text-sm font-semibold">初步生成</p>
+                <p class="mt-3 text-sm leading-6 text-slate-600">依照使用者提供的情境、對象與目的，產生韓語句子或職場訊息初稿。</p>
+                <div class="mt-4 rounded-xl bg-white/80 p-3 text-xs leading-5 text-muted">輸入：寄信給主管，請對方確認報告。</div>
+              </div>
+              <div class="hidden text-2xl text-slate-300 md:block" aria-hidden="true">→</div>
+              <div class="rounded-2xl bg-[#F4F1EB] p-5">
+                <div class="flex items-center justify-between"><span class="text-xs font-bold tracking-widest text-[#8A7B65]">02 · REVIEWER</span><span class="grid h-8 w-8 place-items-center rounded-full bg-white text-[#8A7B65]">⌕</span></div>
+                <h3 class="mt-3 text-xl font-bold">Reviewer</h3><p class="mt-2 text-sm font-semibold">檢查與反思</p>
+                <p class="mt-3 text-sm leading-6 text-slate-600">檢查文法、敬語階級、稱謂、語氣自然度，以及是否出現不合理的雙重敬語。</p>
+                <div class="mt-4 rounded-xl bg-white/80 p-3 text-xs leading-5 text-muted">檢查：對象是否合適？表達是否自然？</div>
+              </div>
+              <div class="hidden text-2xl text-slate-300 md:block" aria-hidden="true">→</div>
+              <div class="rounded-2xl bg-[#EDF2EF] p-5">
+                <div class="flex items-center justify-between"><span class="text-xs font-bold tracking-widest text-[#64806E]">03 · REVISION</span><span class="grid h-8 w-8 place-items-center rounded-full bg-white text-[#64806E]">↻</span></div>
+                <h3 class="mt-3 text-xl font-bold">Revision</h3><p class="mt-2 text-sm font-semibold">修正與輸出</p>
+                <p class="mt-3 text-sm leading-6 text-slate-600">依照檢查意見調整句子，保留原本意思，輸出較正確、自然且符合情境的版本。</p>
+                <div class="mt-4 rounded-xl bg-white/80 p-3 text-xs leading-5 text-muted">輸出：修正版＋修改原因。</div>
+              </div>
+            </div>
+            <div class="mt-6 flex items-center gap-3 rounded-xl border border-dashed border-slate-300 p-4">
+              <span class="text-xl">↺</span><p class="text-sm leading-6 text-slate-600"><strong>反思迴圈：</strong>若 Reviewer 判定仍有問題，Revision 可再次交由 Reviewer 檢查；達到品質標準後才輸出最終版本。</p>
+            </div>
+          </div>
+          <div class="mt-5 grid gap-4 md:grid-cols-2">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5"><h3 class="font-bold">Reviewer 檢查清單</h3><ul class="mt-3 space-y-2 text-sm leading-6 text-slate-600"><li>✓ 文法與助詞是否正確</li><li>✓ 敬語階級是否符合收件者</li><li>✓ 稱謂與主體尊敬是否恰當</li><li>✓ 是否出現重複或不自然的敬語</li><li>✓ 語氣是否符合職場文化與情境</li></ul></article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-5"><h3 class="font-bold">預期輸出內容</h3><ul class="mt-3 space-y-2 text-sm leading-6 text-slate-600"><li>✓ 修正後的韓語句子</li><li>✓ 對應的繁體中文翻譯</li><li>✓ 修改位置與原因</li><li>✓ 敬語階級與適用情境</li><li>✓ 必要時提供更自然的替代說法</li></ul></article>
+          </div>
+          <div class="mt-5 rounded-2xl bg-ink p-5 text-white md:p-6"><p class="text-xs font-bold tracking-widest text-blue-200">IMPORTANT NOTE</p><h3 class="mt-2 text-lg font-bold">AI 產出仍需要人工確認</h3><p class="mt-2 text-sm leading-7 text-slate-200">Reflection Agent 能協助檢查與改善內容，但不代表每次都能完全理解公司內部文化、職稱習慣或人際關係。正式寄出前，仍應由使用者依實際情況確認。</p></div>
+        </section>
+
+        <section id="manners" class="scroll-mt-28">
+          <div class="mb-6"><p class="text-xs font-bold tracking-[.2em] text-accent">SECTION 04 · ETIQUETTE</p><h2 class="mt-2 text-2xl font-bold md:text-3xl">韓國職場社交與禮儀</h2><p class="mt-3 leading-7 text-slate-600">語言之外，稱呼、回應方式與職場互動也會影響溝通給人的感受。以下是初入韓國職場時可以先掌握的基本原則。</p></div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft"><span class="text-2xl">🙇</span><h3 class="mt-3 font-bold">稱呼與職稱</h3><p class="mt-2 text-sm leading-6 text-muted">不確定對方偏好時，可先使用職稱加 님，例如 팀장님。避免未熟識就直呼名字或擅自使用過度親暱的稱呼。</p></article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft"><span class="text-2xl">🤝</span><h3 class="mt-3 font-bold">初次見面</h3><p class="mt-2 text-sm leading-6 text-muted">以簡單問候和自我介紹開場。握手或鞠躬的方式會因公司與情境不同，觀察對方並自然回應即可。</p></article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft"><span class="text-2xl">📩</span><h3 class="mt-3 font-bold">訊息與 Email</h3><p class="mt-2 text-sm leading-6 text-muted">訊息盡量說明目的、期限與附件；收到工作指示時，簡短回覆已收到或預計完成時間，避免讓對方不確定進度。</p></article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft"><span class="text-2xl">🍵</span><h3 class="mt-3 font-bold">聚餐與日常互動</h3><p class="mt-2 text-sm leading-6 text-muted">聚餐場合可能有較多職場文化差異，不必假設所有公司都遵循相同規矩。尊重個人選擇、飲食需求與界線最重要。</p></article>
+          </div>
+        </section>
+
+        <section class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft md:p-7">
+          <p class="text-xs font-bold tracking-widest text-accent">QUICK REVIEW</p><h2 class="mt-2 text-xl font-bold">小測驗：哪一句較適合正式請託？</h2><p class="mt-2 text-sm text-muted">選出較自然、適合工作 Email 的表達。</p>
+          <div class="mt-4 space-y-2" id="quizOptions">
+            <button class="quiz-option block w-full rounded-xl border border-slate-200 p-4 text-left text-sm hover:bg-cream" data-correct="false" lang="ko">빨리 확인해 주세요.</button>
+            <button class="quiz-option block w-full rounded-xl border border-slate-200 p-4 text-left text-sm hover:bg-cream" data-correct="true" lang="ko">확인 부탁드립니다.</button>
+            <button class="quiz-option block w-full rounded-xl border border-slate-200 p-4 text-left text-sm hover:bg-cream" data-correct="false" lang="ko">확인해라.</button>
+          </div>
+          <p id="quizFeedback" class="mt-4 text-sm font-medium text-muted" aria-live="polite">選擇答案後會顯示解析。</p>
+        </section>
+
+        <footer class="border-t border-slate-200 pt-6 text-center text-xs leading-6 text-muted">
+          <p class="font-semibold text-slate-600">K-WORK WIKI · 韓語職場敬語與社交禮儀知識庫</p>
+          <p>本網站為學習用途整理，實際用語請依對象、公司文化與溝通情境調整。</p>
+          <p class="mt-2">© 2026 Korean Workplace Etiquette Wiki</p>
+        </footer>
+      </div>
+    </div>
+  </main>
+
+  <div id="toast" class="pointer-events-none fixed bottom-5 left-1/2 z-50 -translate-x-1/2 translate-y-4 rounded-full bg-ink px-5 py-3 text-sm text-white opacity-0 shadow-lg transition-all" role="status">已複製</div>
+
+  <script>
+    const scenarios = {
+      email: [
+        { tag:'情境 A · 寄送資料', title:'寄送會議資料給主管', ko:'안녕하세요, 팀장님.\\n\\n요청하신 회의 자료를 첨부하여 보내드립니다.\\n확인 부탁드립니다.\\n\\n감사합니다.\\n홍길동 드림.', zh:'您好，組長。隨信附上您要求的會議資料，敬請確認。謝謝您。洪吉童敬上。', note:'드림 是常見的書信結尾敬語；팀장님 是對組長的稱呼。' },
+        { tag:'情境 B · 請求確認', title:'請對方檢視文件並提供意見', ko:'검토해 보시고 의견 주시면 감사하겠습니다.', zh:'若您看過後能提供意見，我將非常感謝。', note:'適合正式 Email；以委婉句型提出請求，而不是直接命令對方。' }
+      ],
+      spoken: [
+        { tag:'情境 C · 工作進度', title:'向主管回報目前進度', ko:'네, 현재 확인하고 있습니다. 확인이 끝나는 대로 바로 말씀드리겠습니다.', zh:'好的，我目前正在確認。確認完成後會馬上向您回報。', note:'말씀드리다 是謙讓表現，適合向主管回報。' },
+        { tag:'情境 D · 請同事稍等', title:'請同事稍等一下', ko:'잠시만 기다려 주시겠어요?', zh:'可以請您稍等一下嗎？', note:'使用 -아/어 주시겠어요? 讓請求聽起來更委婉。熟悉的同事之間也可依關係調整語氣。' }
+      ],
+      apology: [
+        { tag:'情境 E · 延遲回覆', title:'為較晚回覆訊息致歉', ko:'답변이 늦어 죄송합니다. 문의하신 내용은 확인 후 다시 안내드리겠습니다.', zh:'很抱歉比較晚回覆。我確認您詢問的內容後，會再向您說明。', note:'죄송합니다 是正式道歉；안내드리다 是謙讓表現。' },
+        { tag:'情境 F · 收到指示', title:'回覆已收到主管指示', ko:'네, 확인했습니다. 말씀하신 내용대로 진행하겠습니다.', zh:'好的，已確認。我會按照您說明的內容進行。', note:'簡潔明確地確認收到，並說明接下來的處理方式。' }
+      ]
+    };
+
+    const content = document.getElementById('scenarioContent');
+    function renderScenario(key) {
+      content.innerHTML = scenarios[key].map((item) => `
+        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft md:p-6">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div><span class="text-xs font-semibold text-accent">${item.tag}</span><h3 class="mt-1 text-lg font-bold">${item.title}</h3></div>
+            <button class="copy-btn rounded-lg border border-slate-300 px-3 py-2 text-xs font-semibold hover:bg-cream" data-copy="${item.ko.replace(/\\n/g, '&#10;')}">複製韓語範本</button>
+          </div>
+          <div class="mt-4 whitespace-pre-line rounded-xl bg-cream p-4 text-sm leading-7" lang="ko">${item.ko.replace(/\\n/g, '<br>')}</div>
+          <p class="mt-3 text-sm leading-6 text-slate-600"><strong>中文理解：</strong>${item.zh}</p>
+          <p class="mt-2 text-xs text-muted">用法：${item.note}</p>
+        </article>`).join('');
+      bindCopyButtons();
+    }
+
+    document.querySelectorAll('.scenario-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.scenario-tab').forEach(b => {
+          b.classList.remove('bg-ink','text-white'); b.classList.add('border','border-slate-300','bg-white');
+          b.setAttribute('aria-selected','false');
+        });
+        btn.classList.add('bg-ink','text-white'); btn.classList.remove('border','border-slate-300','bg-white');
+        btn.setAttribute('aria-selected','true');
+        renderScenario(btn.dataset.tab);
+      });
+    });
+
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.remove('opacity-0','translate-y-4');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.add('opacity-0','translate-y-4'), 1700);
+    }
+    function bindCopyButtons() {
+      document.querySelectorAll('[data-copy]').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const text = btn.dataset.copy.replace(/&#10;/g, '\\n');
+          try {
+            await navigator.clipboard.writeText(text);
+            showToast('韓語範本已複製');
+          } catch (err) {
+            const area = document.createElement('textarea');
+            area.value = text; document.body.appendChild(area); area.select();
+            document.execCommand('copy'); area.remove(); showToast('韓語範本已複製');
+          }
+        });
+      });
+    }
+    bindCopyButtons();
+
+    document.querySelectorAll('.quiz-option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('border-emerald-400','bg-emerald-50','border-rose-300','bg-rose-50'));
+        const feedback = document.getElementById('quizFeedback');
+        if (btn.dataset.correct === 'true') {
+          btn.classList.add('border-emerald-400','bg-emerald-50');
+          feedback.textContent = '答對了！「확인 부탁드립니다」是常見且自然的正式請託表達，適合工作 Email。';
+          feedback.className = 'mt-4 text-sm font-medium text-emerald-700';
+        } else {
+          btn.classList.add('border-rose-300','bg-rose-50');
+          feedback.textContent = '再想一下。這句較直接或帶有命令感，正式工作 Email 可改用「확인 부탁드립니다」。';
+          feedback.className = 'mt-4 text-sm font-medium text-rose-700';
+        }
+      });
+    });
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileNav.classList.toggle('hidden');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mobileNav.classList.add('hidden'); menuBtn.setAttribute('aria-expanded','false');
+    }));
+
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id));
+        }
+      });
+    }, { rootMargin: '-25% 0px -65% 0px' });
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
